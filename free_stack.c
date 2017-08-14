@@ -9,7 +9,7 @@
  */
 void free_stack(int status, void *arg)
 {
-	void status;
+	(void)status;
 	stack_t **stack;
 	stack_t *next;
 
