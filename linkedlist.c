@@ -32,7 +32,7 @@ stack_t *add_node_start(stack_t **stack, const int n)
  *
  * Return: pointer to the new node, or NULL on failure
  */
-stack_t *add_node_end(stack_t **head, const int n)
+stack_t *add_node_end(stack_t **stack, const int n)
 {
 	stack_t *new, *tmp;
 
