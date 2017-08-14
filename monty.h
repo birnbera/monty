@@ -9,8 +9,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-extern int queue;
-extern size_t stack_len;
+extern struct var var;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
