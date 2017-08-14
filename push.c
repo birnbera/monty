@@ -38,8 +38,5 @@ void m_push(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(arg);
-	if (queue)
-		add_node_end(stack, n);
-	else
-		add_node_start(stack, n);
+	m_push2(stack, n);
 }
