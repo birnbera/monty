@@ -14,7 +14,7 @@
  * @queue: flag to determine if in stack vs queue mode
  * @stack_len: length of the stack
  */
-struct var_s
+typedef struct var_s
 {
 	int queue;
 	size_t stack_len;
