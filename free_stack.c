@@ -9,9 +9,10 @@
  */
 void free_stack(int status, void *arg)
 {
-	(void)status;
 	stack_t **stack;
 	stack_t *next;
+
+	(void)status;
 
 	stack = (stack_t **)arg;
 	while (*stack != NULL)
