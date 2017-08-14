@@ -9,6 +9,8 @@
  */
 static int check_for_digit(char *arg)
 {
+	int i;
+
 	for (i = 0; arg[i]; i++)
 		if (isdigit(arg[i]) == 0)
 			return (1);
@@ -28,7 +30,7 @@ void m_push(stack_t **stack, unsigned int line_number)
 	int n;
 
 	arg = strtok(NULL, "\n\t\r ");
-	if (arg == NULL || check_for _digit(arg))
+	if (arg == NULL || check_for_digit(arg))
 	{
 		dprintf(STDERR_FILENO,
 			"L%ud: usage: push integer\n",
