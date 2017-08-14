@@ -1,0 +1,26 @@
+#include "monty.h"
+
+/**
+ * m_add - add the top two elements of the stack
+ * @stack: double pointer tot he beginning of the stack
+ * @line_number: script line number
+ *
+ * Return: void
+ */
+void m_add(stack_t **stack, unsigned int line_number)
+{
+	int n = 0;
+
+	if (stack_len < 2)
+	{
+		dprintf(STDERR_FILENO,
+			"L%ud: can't add, stack too short",
+			line_number);
+		exit(EXIT_FAILURE);
+	}
+	n += (*stack)->n;
+	m_pop(stack, line_number);
+	n += (*stack)->n;
+	m_pop(stack, line_number);
+	m_push2(stack, line_number, n);
+}
