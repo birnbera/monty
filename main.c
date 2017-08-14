@@ -1,10 +1,14 @@
 #include "monty.h"
 
-struct var {
-	int queue;
-	size_t stack_len;
-} var;
+var_t var;
 
+/**
+ * main - Monty bytecode interpreter
+ * @argc: number of arguments passed
+ * @argv: array of argument strings
+ *
+ * Return: EXIT_SUCCESS on success or EXIT_FAILURE on failure
+ */
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
