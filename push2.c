@@ -3,7 +3,6 @@
 /**
  * m_push2 - push an integer onto the stack
  * @stack: double pointer to the beginning of the stack
- * @line_number: script line number
  * @n: number to push
  *
  * Return: void
