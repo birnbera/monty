@@ -9,8 +9,6 @@
  */
 void m_swap(stack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
-
 	if (var.stack_len < 2)
 	{
 		dprintf(STDERR_FILENO,

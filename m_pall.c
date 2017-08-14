@@ -10,8 +10,9 @@
 void m_pall(stack_t **stack, unsigned int line_number)
 {
 	(void)(line_number);
-	stack_t *head = *stack;
+	stack_t *head;
 
+	head = *stack;
 	while (head != NULL)
 	{
 		printf("%d\n", head->n);
