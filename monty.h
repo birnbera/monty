@@ -63,6 +63,7 @@ void m_add(stack_t **stack, unsigned int line_number);
 void m_nop(stack_t **stack, unsigned int line_number);
 void free_stack(int status, void *arg);
 void m_fs_close(int status, void *arg);
+void free_lineptr(int status, void *arg);
 stack_t *add_node_start(stack_t **stack, const int n);
 stack_t *add_node_end(stack_t **stack, const int n);
 
