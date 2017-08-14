@@ -11,7 +11,7 @@ void m_pint(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
 
-	if (head == NULL)
+	if (var.stack_len == 0)
 	{
 		dprintf(STDERR_FILENO,
 			"L%ud: can't pint, stack empty\n",

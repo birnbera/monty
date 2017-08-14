@@ -11,7 +11,7 @@ void m_swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 
-	if (stack_len < 2)
+	if (var.stack_len < 2)
 	{
 		dprintf(STDERR_FILENO,
 			"L%ud: can't swap, stack too short\n",
