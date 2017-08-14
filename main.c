@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
 	size_t n = 0;
 
 	queue = 0;
+	stack_len = 0;
 	if (argc != 2)
 	{
 		dprintf(STDERR_FILENO, "USAGE: monty file\n");

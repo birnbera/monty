@@ -10,6 +10,7 @@
 #include <unistd.h>
 
 extern int queue;
+extern size_t stack_len;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -43,6 +44,7 @@ typedef struct instruction_s
 
 void get_op(char *op, stack_t **stack, unsigned int line_number);
 void m_push(stack_t **stack, unsigned int line_number);
+void m_push2(stack_t **stack, unsigned int line_number, int n);
 void m_pall(stack_t **stack, unsigned int line_number);
 void m_pint(stack_t **stack, unsigned int line_number);
 void m_pop(stack_t **stack, unsigned int line_number);
