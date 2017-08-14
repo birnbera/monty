@@ -1,5 +1,10 @@
 #include "monty.h"
 
+struct var {
+	int queue;
+	size_t stack_len;
+} var;
+
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
@@ -8,8 +13,8 @@ int main(int argc, char *argv[])
 	char *lineptr = NULL, *op = NULL;
 	size_t n = 0;
 
-	queue = 0;
-	stack_len = 0;
+	var.queue = 0;
+	var.stack_len = 0;
 	if (argc != 2)
 	{
 		dprintf(STDERR_FILENO, "USAGE: monty file\n");
