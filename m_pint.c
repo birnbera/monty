@@ -14,7 +14,7 @@ void m_pint(stack_t **stack, unsigned int line_number)
 	if (var.stack_len == 0)
 	{
 		dprintf(STDERR_FILENO,
-			"L%ud: can't pint, stack empty\n",
+			"L%u: can't pint, stack empty\n",
 			line_number);
 		exit(EXIT_FAILURE);
 	}

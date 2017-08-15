@@ -12,7 +12,7 @@ void m_swap(stack_t **stack, unsigned int line_number)
 	if (var.stack_len < 2)
 	{
 		dprintf(STDERR_FILENO,
-			"L%ud: can't swap, stack too short\n",
+			"L%u: can't swap, stack too short\n",
 			line_number);
 		exit(EXIT_FAILURE);
 	}
