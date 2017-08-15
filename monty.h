@@ -61,6 +61,7 @@ void m_pop(stack_t **stack, unsigned int line_number);
 void m_swap(stack_t **stack, unsigned int line_number);
 void m_add(stack_t **stack, unsigned int line_number);
 void m_nop(stack_t **stack, unsigned int line_number);
+void m_sub(stack_t **stack, unsigned int line_number);
 void free_stack(int status, void *arg);
 void m_fs_close(int status, void *arg);
 void free_lineptr(int status, void *arg);
