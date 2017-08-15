@@ -9,7 +9,9 @@
  */
 void free_lineptr(int status, void *arg)
 {
+	char **lineptr = arg;
+
 	(void)status;
-	if (arg != NULL)
-		free(arg);
+	if (*lineptr != NULL)
+		free(*lineptr);
 }

@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+	on_exit(free_lineptr, &lineptr);
 	on_exit(free_stack, &stack);
 	on_exit(m_fs_close, fs);
-	on_exit(free_lineptr, lineptr);
 	while (getline(&lineptr, &n, fs) != -1)
 	{
 		line_number++;
