@@ -41,7 +41,7 @@ void get_op(char *op, stack_t **stack, unsigned int line_number)
 		}
 	}
 
-	dprintf(STDERR_FILENO,
+	dprintf(STDOUT_FILENO,
 		"L%u: unknown instruction %s\n",
 		line_number, op);
 	exit(EXIT_FAILURE);

@@ -13,7 +13,7 @@ void m_mod(stack_t **stack, unsigned int line_number)
 
 	if (var.stack_len < 2)
 	{
-		dprintf(STDERR_FILENO,
+		dprintf(STDOUT_FILENO,
 			"L%u: can't mod, stack too short",
 			line_number);
 		exit(EXIT_FAILURE);
@@ -22,7 +22,7 @@ void m_mod(stack_t **stack, unsigned int line_number)
 	m_pop(stack, line_number);
 	if (n == 0)
 	{
-		dprintf(STDERR_FILENO,
+		dprintf(STDOUT_FILENO,
 			"L%u: division by zero\n",
 			line_number);
 		exit(EXIT_FAILURE);

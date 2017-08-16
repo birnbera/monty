@@ -13,7 +13,7 @@ void m_sub(stack_t **stack, unsigned int line_number)
 
 	if (var.stack_len < 2)
 	{
-		dprintf(STDERR_FILENO,
+		dprintf(STDOUT_FILENO,
 			"L%u: can't sub, stack too short",
 			line_number);
 		exit(EXIT_FAILURE);

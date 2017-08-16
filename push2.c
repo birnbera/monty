@@ -13,7 +13,7 @@ void m_push2(stack_t **stack, int n)
 	{
 		if (!add_node_end(stack, n))
 		{
-			dprintf(STDERR_FILENO, "Error: malloc failed\n");
+			dprintf(STDOUT_FILENO, "Error: malloc failed\n");
 			exit(EXIT_FAILURE);
 		}
 		var.stack_len++;
@@ -22,7 +22,7 @@ void m_push2(stack_t **stack, int n)
 	{
 		if (!add_node_start(stack, n))
 		{
-			dprintf(STDERR_FILENO, "Error: malloc failed\n");
+			dprintf(STDOUT_FILENO, "Error: malloc failed\n");
 			exit(EXIT_FAILURE);
 		}
 		var.stack_len++;
