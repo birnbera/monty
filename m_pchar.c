@@ -23,8 +23,8 @@ void m_pchar(stack_t **stack, unsigned int line_number)
 	if (!isprint(ch))
 	{
 		dprintf(STDERR_FILENO,
-                        "L%u: can't pchar, value out of range",
-                        line_number);
+			"L%u: can't pchar, value out of range",
+			line_number);
 		exit(EXIT_FAILURE);
 	}
 	printf("%c\n", ch);
