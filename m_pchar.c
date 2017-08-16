@@ -15,7 +15,7 @@ void m_pchar(stack_t **stack, unsigned int line_number)
 	if (var.stack_len < 1)
 	{
 		dprintf(STDOUT_FILENO,
-			"L%u: can't pchar, stack empty",
+			"L%u: can't pchar, stack empty\n",
 			line_number);
 		exit(EXIT_FAILURE);
 	}
@@ -23,7 +23,7 @@ void m_pchar(stack_t **stack, unsigned int line_number)
 	if (!isprint(ch))
 	{
 		dprintf(STDOUT_FILENO,
-			"L%u: can't pchar, value out of range",
+			"L%u: can't pchar, value out of range\n",
 			line_number);
 		exit(EXIT_FAILURE);
 	}
