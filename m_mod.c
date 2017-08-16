@@ -14,7 +14,7 @@ void m_mod(stack_t **stack, unsigned int line_number)
 	if (var.stack_len < 2)
 	{
 		dprintf(STDOUT_FILENO,
-			"L%u: can't mod, stack too short",
+			"L%u: can't mod, stack too short\n",
 			line_number);
 		exit(EXIT_FAILURE);
 	}
