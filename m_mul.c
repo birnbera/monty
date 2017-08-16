@@ -9,7 +9,7 @@
  */
 void m_mul(stack_t **stack, unsigned int line_number)
 {
-	int n, m;
+	int n, m, flag;
 
 	if (var.stack_len < 2)
 	{
@@ -22,5 +22,8 @@ void m_mul(stack_t **stack, unsigned int line_number)
 	m_pop(stack, line_number);
 	m = (*stack)->n;
 	m_pop(stack, line_number);
+	flag = var.queue;
+	var.queue = 0;
 	m_push2(stack, m * n);
+	var.queue = flag;
 }
