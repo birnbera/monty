@@ -9,7 +9,7 @@
  */
 void m_mod(stack_t **stack, unsigned int line_number)
 {
-	int n, m, flag;
+	int n;
 
 	if (var.stack_len < 2)
 	{
@@ -27,10 +27,5 @@ void m_mod(stack_t **stack, unsigned int line_number)
 			line_number);
 		exit(EXIT_FAILURE);
 	}
-	m = (*stack)->n;
-	m_pop(stack, line_number);
-	flag = var.queue;
-	var.queue = 0;
-	m_push2(stack, m % n);
-	var.queue = flag;
+	(*stack)->n %= n;
 }
