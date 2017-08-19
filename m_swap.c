@@ -9,6 +9,8 @@
  */
 void m_swap(stack_t **stack, unsigned int line_number)
 {
+	stack_t *next;
+
 	if (var.stack_len < 2)
 	{
 		dprintf(STDOUT_FILENO,
@@ -16,11 +18,17 @@ void m_swap(stack_t **stack, unsigned int line_number)
 			line_number);
 		exit(EXIT_FAILURE);
 	}
-	(*stack)->prev = (*stack)->next;
-	(*stack)->next = (*stack)->next->next;
-	if ((*stack)->next != NULL)
-		(*stack)->next->prev = (*stack);
-	(*stack)->prev->next = (*stack);
-	(*stack)->prev->prev = NULL;
-	(*stack) = (*stack)->prev;
+	if (var.stack_len == 2)
+	{
+		*stack = (*stack)->next;
+		return;
+	}
+	next = (*stack)->next;
+	next->prev = (*stack)->prev;
+	(*stack)->prev->next = next;
+	(*stack)->prev = next;
+	(*stack)->next = next->next;
+	next->next->prev = *stack;
+	next->next = *stack;
+	*stack = next;
 }

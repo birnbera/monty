@@ -24,6 +24,8 @@ void m_pstr(stack_t **stack, unsigned int line_number)
 			break;
 		putchar(ch);
 		temp = temp->next;
+		if (temp == *stack)
+			break;
 	}
 	putchar('\n');
 }
