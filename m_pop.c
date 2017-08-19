@@ -18,9 +18,12 @@ void m_pop(stack_t **stack, unsigned int line_number)
 			line_number);
 		exit(EXIT_FAILURE);
 	}
-	if ((*stack)->next != NULL)
-		(*stack)->next->prev = NULL;
-	(*stack) = (*stack)->next;
+	(*stack)->next->prev = (*stack)->prev;
+	(*stack)->prev->next = (*stack)->next;
+	if (var.stack_len != 1)
+		*stack = (*stack)->next;
+	else
+		*stack = NULL;
 	free(pop);
 	var.stack_len--;
 }
